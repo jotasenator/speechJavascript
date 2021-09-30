@@ -1,0 +1,110 @@
+<html>
+
+<head>
+	<title>Adivino Personalidad</title>
+	
+
+	<style>
+		button{
+			
+			background:#6B8E23;
+			border-radius:15%;
+			color:white;
+			font-weight:bold;
+			height:100px;
+			width:200px;
+		}
+		body{
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-top:100px;
+			margin-left:500px;
+			margin-right:500px;
+			padding:10px;
+			
+		}
+		input{
+			padding:10px;
+			font-size: medium;
+		}
+		div{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-top:50px;
+		}
+		span{
+			display: inline-block;			
+			margin-top: -36px;
+		}
+		
+		
+	</style>
+	
+</head>
+
+<body>
+	<h2>Con&eacute;ctate a Internet y</h2>
+	<h2>Mire a la pantalla 5 segundos!!</h2>	
+	<div>
+	<label for='input'><h2>Escriba su nombre:&nbsp; </h2></label>
+	<input id='input' type='text' placeholder="Teclee su nombre">
+	</div>
+	<h2>Respire...</h2>
+	<div>
+	<h2>Presione el bot&oacute;n <span>&#128073;</span></h2>
+	<button id='button'>Escucha la verdad!</button>
+	</div>
+	<script>
+
+		let inputValue = document.getElementById('input');		
+		
+		const button = document.getElementById("button");
+		const speak=(msg)=>{
+			const sp=new SpeechSynthesisUtterance(msg);
+			[sp.voice]=speechSynthesis.getVoices();
+			speechSynthesis.speak(sp)
+		}
+
+		button.onclick=()=>{
+			switch (inputValue.value.toLowerCase()) {
+				case 'Yausmara'.toLowerCase():
+					return speak(`${inputValue.value} eres muy comunista mi vida, tienes que dejar esas cosas del partido que te vas a volver loka`)
+				case 'Domingo'.toLowerCase():
+					return speak(`${inputValue.value} por favor no trabajes mas en el campo que despues estas matao!`)
+				case 'Gallega'.toLowerCase():
+					return speak(`${inputValue.value} de tanto ver novelas turcas ya te conoces Estambul por completo!`)
+				case 'Maykel'.toLowerCase():
+					return speak(`${inputValue.value} termina lo que estas haciendo que tienes que ir a guataquear`)
+				case 'Yohan'.toLowerCase():
+					return speak(`${inputValue.value} te estan esperando en Cuba para que trabajes en Estadistica Provincial!`)
+				case 'Yoan'.toLowerCase():
+					return speak(`${inputValue.value} te estan esperando en Cuba para que trabajes en Estadistica Provincial!`)
+				case 'Aismara'.toLowerCase():
+					return speak(`${inputValue.value} cuando vas a venir pal Entronque con los muchachos pa que se los dejes a la Gallega!`)
+				case 'Ida'.toLowerCase():
+					return speak(`${inputValue.value} no laves mas y corre que llego algo al kiosko!`)
+				case 'Milay'.toLowerCase():
+					return speak(`${inputValue.value} no veas mas novelas y ponganse a trabajar!`)
+				case 'Mileivys'.toLowerCase():
+					return speak(`${inputValue.value} en chile se trabaja muy poco, que buena vida!`)
+				case 'Mileivis'.toLowerCase():
+					return speak(`${inputValue.value} en chile se trabaja muy poco, que buena vida!`)
+				case 'Silvio'.toLowerCase():
+					return speak(`${inputValue.value} no trabajes mas que despues te duele la cintura, mejor dale un cigarrito a Maykel!`)
+				case 'Zoila'.toLowerCase():
+					return speak(`${inputValue.value} acuerdate de ponerle un peso a los numeros tuyos hoy, que no se te olvide!`)
+								
+				default:
+					break;
+			}
+			
+		}
+		
+
+	</script>
+</body>
+</html>
